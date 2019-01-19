@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'C:\Users\Admin\PycharmProjects\garage\driverform.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_DriverForm(object):
+    def setupUi(self, DriverForm):
+        DriverForm.setObjectName("DriverForm")
+        DriverForm.resize(477, 172)
+        self.centralwidget = QtWidgets.QWidget(DriverForm)
+        self.centralwidget.setObjectName("centralwidget")
+        self.NameEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.NameEdit.setGeometry(QtCore.QRect(110, 70, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.NameEdit.setFont(font)
+        self.NameEdit.setObjectName("NameEdit")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(36, 70, 51, 20))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(16, 110, 71, 21))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.OldEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.OldEdit.setGeometry(QtCore.QRect(110, 110, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.OldEdit.setFont(font)
+        self.OldEdit.setObjectName("OldEdit")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(260, 10, 61, 20))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.PaymentEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.PaymentEdit.setGeometry(QtCore.QRect(340, 9, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.PaymentEdit.setFont(font)
+        self.PaymentEdit.setObjectName("PaymentEdit")
+        self.SaveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.SaveButton.setGeometry(QtCore.QRect(260, 90, 191, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.SaveButton.setFont(font)
+        self.SaveButton.setObjectName("SaveButton")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(260, 50, 51, 20))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.ExperienceEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.ExperienceEdit.setGeometry(QtCore.QRect(340, 49, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.ExperienceEdit.setFont(font)
+        self.ExperienceEdit.setObjectName("ExperienceEdit")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(36, 20, 51, 20))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.IdEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.IdEdit.setGeometry(QtCore.QRect(110, 20, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.IdEdit.setFont(font)
+        self.IdEdit.setObjectName("IdEdit")
+        DriverForm.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(DriverForm)
+        self.statusbar.setObjectName("statusbar")
+        DriverForm.setStatusBar(self.statusbar)
+
+        self.retranslateUi(DriverForm)
+        QtCore.QMetaObject.connectSlotsByName(DriverForm)
+
+    def retranslateUi(self, DriverForm):
+        _translate = QtCore.QCoreApplication.translate
+        DriverForm.setWindowTitle(_translate("DriverForm", "Водитель"))
+        self.label.setText(_translate("DriverForm", "Имя"))
+        self.label_2.setText(_translate("DriverForm", "Возраст"))
+        self.label_3.setText(_translate("DriverForm", "Оклад"))
+        self.SaveButton.setText(_translate("DriverForm", "Сохранить"))
+        self.label_5.setText(_translate("DriverForm", "Стаж"))
+        self.label_4.setText(_translate("DriverForm", "id"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    DriverForm = QtWidgets.QMainWindow()
+    ui = Ui_DriverForm()
+    ui.setupUi(DriverForm)
+    DriverForm.show()
+    sys.exit(app.exec_())
+

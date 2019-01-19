@@ -1,0 +1,113 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'C:\Users\Admin\PycharmProjects\garage\userform.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_UserForm(object):
+    def setupUi(self, UserForm):
+        UserForm.setObjectName("UserForm")
+        UserForm.resize(474, 215)
+        self.centralwidget = QtWidgets.QWidget(UserForm)
+        self.centralwidget.setObjectName("centralwidget")
+        self.LoginEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.LoginEdit.setGeometry(QtCore.QRect(110, 60, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.LoginEdit.setFont(font)
+        self.LoginEdit.setObjectName("LoginEdit")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(26, 60, 61, 21))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.PasswordEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.PasswordEdit.setGeometry(QtCore.QRect(110, 100, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.PasswordEdit.setFont(font)
+        self.PasswordEdit.setText("")
+        self.PasswordEdit.setObjectName("PasswordEdit")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 100, 71, 21))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.SaveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.SaveButton.setGeometry(QtCore.QRect(240, 130, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.SaveButton.setFont(font)
+        self.SaveButton.setObjectName("SaveButton")
+        self.IdEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.IdEdit.setGeometry(QtCore.QRect(110, 10, 61, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.IdEdit.setFont(font)
+        self.IdEdit.setReadOnly(True)
+        self.IdEdit.setObjectName("IdEdit")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(70, 10, 21, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.NameEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.NameEdit.setGeometry(QtCore.QRect(110, 140, 113, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.NameEdit.setFont(font)
+        self.NameEdit.setText("")
+        self.NameEdit.setObjectName("NameEdit")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(40, 140, 47, 21))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.PosComboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.PosComboBox.setGeometry(QtCore.QRect(240, 60, 141, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.PosComboBox.setFont(font)
+        self.PosComboBox.setObjectName("PosComboBox")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(250, 20, 101, 20))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        UserForm.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(UserForm)
+        self.statusbar.setObjectName("statusbar")
+        UserForm.setStatusBar(self.statusbar)
+
+        self.retranslateUi(UserForm)
+        QtCore.QMetaObject.connectSlotsByName(UserForm)
+
+    def retranslateUi(self, UserForm):
+        _translate = QtCore.QCoreApplication.translate
+        UserForm.setWindowTitle(_translate("UserForm", "Login"))
+        self.label.setText(_translate("UserForm", "логин"))
+        self.label_2.setText(_translate("UserForm", "пароль"))
+        self.SaveButton.setText(_translate("UserForm", "Сохранить"))
+        self.label_3.setText(_translate("UserForm", "id"))
+        self.label_4.setText(_translate("UserForm", "Имя"))
+        self.label_5.setText(_translate("UserForm", "Должность"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    UserForm = QtWidgets.QMainWindow()
+    ui = Ui_UserForm()
+    ui.setupUi(UserForm)
+    UserForm.show()
+    sys.exit(app.exec_())
+

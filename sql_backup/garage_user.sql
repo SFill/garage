@@ -1,0 +1,13 @@
+UPDATE garage.user SET id_position = 1, login = 'misha', password = '1234', name = 'Misha Ivanov Ivanovich' WHERE id = 1;
+UPDATE garage.user SET id_position = 2, login = 'lena', password = '1234', name = 'Lena' WHERE id = 2;
+UPDATE garage.user SET id_position = 2, login = 'tennie_6678', password = '''1r?JM)+', name = 'Надежда Горбачёва' WHERE id = 3;
+UPDATE garage.user SET id_position = 2, login = 'barrie6011', password = 'g#z1;PXt', name = 'Регина Сорокина' WHERE id = 4;
+UPDATE garage.user SET id_position = 2, login = 'pandora-7603', password = '.;DOg>s', name = 'Раиса Игнатова' WHERE id = 5;
+UPDATE garage.user SET id_position = 1, login = 'emmy-3486', password = '.Elk{eEk', name = 'Аурелия Козлова' WHERE id = 6;
+UPDATE garage.user SET id_position = 1, login = 'walter2129', password = '\\_dN~lPc', name = 'Лада Шашкова' WHERE id = 7;
+UPDATE garage.user SET id_position = 1, login = 'trinh-6370', password = 'QFo]''UL:', name = 'Ростислава Кулакова' WHERE id = 8;
+UPDATE garage.user SET id_position = 1, login = 'olympia-461', password = 'BJ.iRXcZ', name = 'Анисья Филиппова' WHERE id = 9;
+UPDATE garage.user SET id_position = 1, login = 'arnetta_4254', password = 'pZe%0^HH', name = 'Илзе Семёнова' WHERE id = 10;
+UPDATE garage.user SET id_position = 1, login = 'katherina7568', password = 'm2a57/+=', name = 'Инара Егорова' WHERE id = 11;
+UPDATE garage.user SET id_position = 1, login = 'jenell_1161', password = 'j)z;R-#i', name = 'Софья Александрова' WHERE id = 12;
+UPDATE garage.user SET id_position = 1, login = 'pei-2123', password = 'udC#6bu^', name = 'Земфира Дмитриева' WHERE id = 13;
