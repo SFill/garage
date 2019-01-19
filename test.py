@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Admin\PycharmProjects\garage\test.ui'
+# Form implementation generated from reading ui file 'C:\Users\Admin\PycharmProjects\garage\ui\test.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -107,6 +107,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.layoutWidget_3)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.AvtoPrintButton = QtWidgets.QPushButton(self.layoutWidget_3)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.AvtoPrintButton.setFont(font)
+        self.AvtoPrintButton.setStyleSheet("")
+        self.AvtoPrintButton.setObjectName("AvtoPrintButton")
+        self.horizontalLayout_2.addWidget(self.AvtoPrintButton)
         self.AvtoCreateButton = QtWidgets.QPushButton(self.layoutWidget_3)
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -175,6 +182,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget_4)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
+        self.DriverPrintButton = QtWidgets.QPushButton(self.layoutWidget_4)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.DriverPrintButton.setFont(font)
+        self.DriverPrintButton.setStyleSheet("")
+        self.DriverPrintButton.setObjectName("DriverPrintButton")
+        self.horizontalLayout.addWidget(self.DriverPrintButton)
         self.DriverCreateButton = QtWidgets.QPushButton(self.layoutWidget_4)
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -231,6 +245,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.UserPrintButton = QtWidgets.QPushButton(self.layoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.UserPrintButton.setFont(font)
+        self.UserPrintButton.setStyleSheet("")
+        self.UserPrintButton.setObjectName("UserPrintButton")
+        self.horizontalLayout_3.addWidget(self.UserPrintButton)
         self.UserCreateButton = QtWidgets.QPushButton(self.layoutWidget)
         font = QtGui.QFont()
         font.setPointSize(14)
@@ -296,7 +317,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -328,6 +349,7 @@ class Ui_MainWindow(object):
         self.RouteDeleteButton.setText(_translate("MainWindow", "Удалить"))
         self.RouteSearchButton.setText(_translate("MainWindow", "Поиск"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Выезды"))
+        self.AvtoPrintButton.setText(_translate("MainWindow", "Печать"))
         self.AvtoCreateButton.setText(_translate("MainWindow", "Новая запись"))
         self.AvtoUpdateButton.setText(_translate("MainWindow", "Обновить"))
         self.AvtoDeleteButton.setText(_translate("MainWindow", "Удалить"))
@@ -343,6 +365,7 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Автомобили"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Автомобили"))
         self.label_3.setText(_translate("MainWindow", "Водители"))
+        self.DriverPrintButton.setText(_translate("MainWindow", "Печать"))
         self.DriverCreateButton.setText(_translate("MainWindow", "Новая запись"))
         self.DriverUpdateButton.setText(_translate("MainWindow", "Обновить"))
         self.DriverDeleteButton.setText(_translate("MainWindow", "Удалить"))
@@ -358,6 +381,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_2.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Номер водителя"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Водители"))
+        self.UserPrintButton.setText(_translate("MainWindow", "Печать"))
         self.UserCreateButton.setText(_translate("MainWindow", "Новая запись"))
         self.UserUpdateButton.setText(_translate("MainWindow", "Обновить"))
         self.UserDeleteButton.setText(_translate("MainWindow", "Удалить"))

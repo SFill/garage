@@ -1,6 +1,7 @@
 from cx_Freeze import setup, Executable
 import mysqlx.protobuf.mysqlx_notice_pb2
 import google
+import func
 
 executables = [Executable('app.py', targetName='qt_app.exe')]
 
@@ -9,7 +10,7 @@ executables = [Executable('app.py', targetName='qt_app.exe')]
 excludes=[]
 
 #zip_include_packages = ['collections', 'encodings', 'importlib', 'wx']
-additional_mods=['mysqlx',]
+additional_mods=['mysqlx','func']
 
 
 options = {

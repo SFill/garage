@@ -103,20 +103,24 @@ class MyApp(
             self.AvtoCreateButton.clicked.connect(self.avto_create)
             self.AvtoDeleteButton.clicked.connect(self.avto_delete)
             self.AvtoUpdateButton.clicked.connect(self.avto_update)
+            self.AvtoPrintButton.clicked.connect(self.avto_print)
         else:
             self.AvtoCreateButton.setEnabled(False)
             self.AvtoDeleteButton.setEnabled(False)
             self.AvtoUpdateButton.setEnabled(False)
+            self.AvtoPrintButton.setEnabled(False)
 
         # buttons driver
         if self.admin_mode or self.moder_mode:
             self.DriverCreateButton.clicked.connect(self.driver_create)
             self.DriverDeleteButton.clicked.connect(self.driver_delete)
             self.DriverUpdateButton.clicked.connect(self.driver_update)
+            self.DriverPrintButton.clicked.connect(self.driver_print)
         else:
             self.DriverCreateButton.setEnabled(False)
             self.DriverDeleteButton.setEnabled(False)
             self.DriverUpdateButton.setEnabled(False)
+            self.DriverPrintButton.setEnabled(False)
 
         # buttons route
         if self.admin_mode or self.moder_mode:
@@ -128,6 +132,7 @@ class MyApp(
             self.RouteCreateButton.setEnabled(False)
             self.RouteDeleteButton.setEnabled(False)
             self.RouteUpdateButton.setEnabled(False)
+            self.RoutePrintButton.setEnabled(False)
 
         # search
         if self.admin_mode:

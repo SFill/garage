@@ -1,3 +1,4 @@
+import datetime
 from decimal import Decimal
 
 import mysqlx
@@ -7,6 +8,8 @@ from PyQt5.QtWidgets import QMessageBox
 from config import mysql_config
 from func.forms import driverform
 from func.msg import MsgForm
+from func.report import make_report
+
 
 class DriverForm(QtWidgets.QMainWindow, driverform.Ui_DriverForm ):
     def __init__(self,pre_exit=None, insert=False,obj_out=None):
@@ -157,3 +160,9 @@ class Driver():
                     obj_out.setItem(i, 4, QtWidgets.QTableWidgetItem(id[0]))
         except Exception as e:
             return
+
+    def driver_print(self):
+        f = 'report_driver' + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + '.xlsx'
+        headers = ['имя', 'возраст', 'опыт', 'зарплата']
+        table = self.tableWidget_2
+        make_report(f, headers, table)

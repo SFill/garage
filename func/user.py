@@ -1,3 +1,4 @@
+import datetime
 import re
 
 import mysqlx
@@ -7,6 +8,7 @@ from PyQt5.QtWidgets import QMessageBox
 from config import mysql_config
 from func.forms import userform
 from func.msg import MsgForm
+from func.report import make_report
 
 
 class UserForm(QtWidgets.QMainWindow, userform.Ui_UserForm):
@@ -182,3 +184,8 @@ class User():
         except Exception as e:
             print(e)
             return
+    def user_print(self):
+        f = 'report_user' + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + '.xlsx'
+        headers = ['id','должность', 'логин', 'пароль', 'имя']
+        table = self.tableWidget_4
+        make_report(f, headers, table)

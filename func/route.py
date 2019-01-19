@@ -1,10 +1,16 @@
+import datetime
+import os
+
 import mysqlx
+import xlsxwriter
+
 from PyQt5 import QtWidgets, QtPrintSupport, QtGui
-from PyQt5.QtWidgets import QMessageBox, QAbstractButton
+from PyQt5.QtWidgets import QMessageBox
 
 from config import mysql_config
 from func.forms import routeform
 from func.msg import MsgForm
+from func.report import make_report
 
 
 class RouteForm(QtWidgets.QMainWindow, routeform.Ui_RouteForm ):
@@ -206,15 +212,9 @@ class Route():
         except Exception as e:
             print(e)
 
-    def route_print(self):
-        printer = QtPrintSupport.QPrinter()
-        # Create painter
-        painter = QtGui.QPainter()
-        # Start painter
-        painter.begin(printer)
-        # Grab a widget you want to print
-        screen = self.tableWidget_3.grab()
-        # Draw grabbed pixmap
-        painter.drawPixmap(10, 10, screen)
-        # End painting
-        painter.end()
+    def route_print(self,table,headers):
+        f = 'report_route' + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + '.xlsx'
+        headers = ['начало', 'конец', 'план', 'исполнено', 'заказчик', 'учетный номер', 'имя водителя',
+                   'номер водителя']
+        table = self.tableWidget_3
+        make_report(f,headers,table)

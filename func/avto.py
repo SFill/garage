@@ -1,3 +1,5 @@
+import re
+
 import mysqlx
 from PyQt5 import QtWidgets
 from datetime import datetime, date as dt_date
@@ -7,6 +9,7 @@ from PyQt5.QtWidgets import QMessageBox
 from config import mysql_config
 from func.forms import avtoform
 from func.msg import MsgForm
+from func.report import make_report
 
 
 class AvtoForm(QtWidgets.QMainWindow, avtoform.Ui_AvtoForm,):
@@ -21,6 +24,7 @@ class AvtoForm(QtWidgets.QMainWindow, avtoform.Ui_AvtoForm,):
     def validate_fields(self):
         date = self.DateEdit.text().strip()
         id = self.IdEdit.text().strip()
+        znak = self.NumberEdit.text().strip()
         valid = True
 
         try:
@@ -29,6 +33,9 @@ class AvtoForm(QtWidgets.QMainWindow, avtoform.Ui_AvtoForm,):
                 valid = False
             if str(int(id)) != id:
                 valid = False
+            if len(znak)!=6 or re.match(r'[abekmnopctyx]\d{3}[abekmnopctyx]{2}',znak) is None :
+                valid = False
+
         except Exception:
             valid = False
         return valid
@@ -141,3 +148,9 @@ class Avto():
         self.session.sql(query).execute()
         self.session.close()
         self.tableWidget.removeRow(selected_row)
+
+    def avto_print(self):
+        f = 'report_avto' + datetime.now().strftime("%Y%m%d-%H%M%S") + '.xlsx'
+        headers = ['марка', 'номер', 'год выпуска']
+        table = self.tableWidget
+        make_report(f, headers, table)
